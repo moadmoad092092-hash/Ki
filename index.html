@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b16">
+  <meta name="description" content="لعبة ثلاثية الأبعاد صغيرة تعمل في المتصفح: اجمع البلورات وتفادَ العوائق.">
+  <title>مدار — لعبة ثلاثية الأبعاد</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="مدار، البداية"><span class="brand-mark">◈</span> مَدار</a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#game">اللعبة</a>
+      <a href="#about">عن التجربة</a>
+      <a href="#controls">طريقة اللعب</a>
+    </nav>
+    <a class="header-cta" href="#game">ابدأ اللعب <span aria-hidden="true">←</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> تجربة لعب مصغّرة · تعمل في متصفحك</p>
+        <h1 id="hero-title">حلّق أبعد.<br><span>واجمع النور.</span></h1>
+        <p class="hero-description">انطلق في مدار من الأشكال الهندسية، واجمع البلورات المتوهجة وتفادَ الحواجز. إلى أي مسافة تستطيع الوصول؟</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#game">العب الآن <span aria-hidden="true">↙</span></a>
+          <a class="text-link" href="#about">اكتشف التجربة <span aria-hidden="true">←</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">⌨</span><span>الأسهم أو A وD للتحرك<br><small>على الهاتف: اسحب يمينًا أو يسارًا</small></span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-crystal">◆</div><div class="art-star star-a">✦</div><div class="art-star star-b">·</div><div class="art-star star-c">✧</div>
+        <div class="art-caption">01 <span>—</span> إلى ما لا نهاية</div>
+      </div>
+    </section>
+
+    <section class="game-section" id="game" aria-labelledby="game-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / ساحة اللعب</p><h2 id="game-title">مدار مفتوح</h2></div>
+        <p>رحلتك تبدأ من هنا. اجمع البلورات<br>ولا تدع العوائق توقفك.</p>
+      </div>
+      <div class="game-frame">
+        <div class="game-topbar"><div class="game-label"><span class="live-dot"></span> تجربة تفاعلية <span class="separator">/</span> <span id="game-status">جاهز للإقلاع</span></div><div class="game-stats"><span>النتيجة <b id="score">000</b></span><span class="stat-divider"></span><span>أفضل نتيجة <b id="best">000</b></span></div></div>
+        <div class="canvas-wrap">
+          <canvas id="game-canvas" aria-label="ساحة لعبة ثلاثية الأبعاد: حرّك المركبة بين المسارات واجمع البلورات وتفادَ العوائق" role="img"></canvas>
+          <div class="game-overlay" id="overlay"><div class="overlay-card"><span class="overlay-icon" id="overlay-icon">✦</span><p class="overlay-kicker" id="overlay-kicker">مستعد؟</p><h3 id="overlay-title">ابدأ رحلتك</h3><p id="overlay-text">اجمع البلورات وتفادَ الحواجز لأطول مسافة ممكنة.</p><button class="button button-primary" id="start-button" type="button">ابدأ اللعب <span aria-hidden="true">←</span></button></div></div>
+          <div class="mobile-controls" aria-label="أزرار التحكم"><button type="button" id="left-button" aria-label="تحرك يسارًا">←</button><button type="button" id="right-button" aria-label="تحرك يمينًا">→</button></div>
+        </div>
+        <div class="game-bottombar"><span><kbd>←</kbd> <kbd>→</kbd> أو <kbd>A</kbd> <kbd>D</kbd> للتحرك</span><span>اجمع <b class="cyan">◆</b> وتفادَ <b class="pink">■</b></span><button id="sound-button" type="button" aria-pressed="false" title="تشغيل أو إيقاف الصوت">الصوت: متوقف</button></div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-intro"><p class="eyebrow">02 / عن التجربة</p><h2 id="about-title">عالم صغير،<br><span>مصنوع للعب.</span></h2></div>
+      <p class="about-copy">«مدار» لعبة متصفح تجريبية تستلهم الخيال العلمي وألعاب الأركيد. تتحرك عبر ممر فضائي متغير، وتختبر سرعة ردّ فعلك مع كل بلورة تجمعها. لا تنزيلات ولا إضافات — فقط افتح الصفحة والعب.</p>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><span class="feature-icon">◈</span><h3>مسارات متغيرة</h3><p>ثلاثة مسارات للتنقل بينها ومواصلة الرحلة.</p></article>
+        <article class="feature-card"><span class="feature-number">02</span><span class="feature-icon">✦</span><h3>اجمع البلورات</h3><p>كل بلورة تضيء طريقك وتضيف إلى نتيجتك.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><span class="feature-icon">↗</span><h3>تحدّ نفسك</h3><p>تزداد السرعة تدريجيًا. حاول تحطيم أفضل نتيجة.</p></article>
+      </div>
+    </section>
+
+    <section class="controls-section" id="controls" aria-labelledby="controls-title"><div><p class="eyebrow">03 / بسيطة وسريعة</p><h2 id="controls-title">أنت في القيادة.</h2></div><div class="control-list"><div><span class="control-keys"><kbd>←</kbd><kbd>→</kbd></span><p>تحرك بين المسارات</p></div><div><span class="control-keys"><kbd>A</kbd><kbd>D</kbd></span><p>بديل لوحة المفاتيح</p></div><div><span class="control-keys"><span class="drag-icon">↔</span></span><p>اسحب على شاشة اللمس</p></div></div></section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">◈</span> مَدار</a><p>تجربة لعب مستقلة تعمل داخل المتصفح.</p><a href="#home">العودة للأعلى ↑</a></footer>
+</body>
+</html>
